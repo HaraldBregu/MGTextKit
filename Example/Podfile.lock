@@ -1,0 +1,16 @@
+PODS:
+  - MGTextKit (0.1.0)
+
+DEPENDENCIES:
+  - MGTextKit (from `../`)
+
+EXTERNAL SOURCES:
+  MGTextKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MGTextKit: 2858779718c794185b23d38060879b0fbad84f34
+
+PODFILE CHECKSUM: 9a1a078b5eeb1c107400ff20131083c5ae1fd0cd
+
+COCOAPODS: 1.6.1

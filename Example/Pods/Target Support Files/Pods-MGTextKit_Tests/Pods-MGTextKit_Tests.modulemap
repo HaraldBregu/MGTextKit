@@ -1,0 +1,6 @@
+framework module Pods_MGTextKit_Tests {
+  umbrella header "Pods-MGTextKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
