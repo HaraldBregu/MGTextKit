@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MGTextKit_Example' do
+  pod 'MGTextKit', :path => '../'
+
+  target 'MGTextKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
