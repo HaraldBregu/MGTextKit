@@ -49,14 +49,10 @@ public protocol MGTextImage {
 public protocol MGTextColor {
     var navigationBar: UIColor { get set }
     var navigationBarContent: UIColor { get set }
-    var toolBar: UIColor { get set }
-    var toolBarContent: UIColor { get set }
     var view: UIColor { get set }
     var viewContent: UIColor { get set }
 }
 
 public protocol MGTextData {
     var url: String { get set }
-    var enableAds: Bool { get set }
-    var adsUnitId: String { get set }
 }

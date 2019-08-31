@@ -1,22 +1,28 @@
 {
   "name": "MGTextKit",
   "version": "0.1.0",
-  "summary": "A short description of MGTextKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/AldoOS/MGTextKit",
+  "summary": "When you sit down to work, external critics aren’t",
+  "description": "When you sit down to work, external critics aren’t the enemy. It’s you who you must to fight against to do great fucking work. You must overcome yourself. Saul Bass on failure: Failure is built into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’ then one must expect and accept the fucking possibility of failure.",
+  "homepage": "https://github.com/HaraldBregu/",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "AldoOS": "harald.bregu@gmail.com"
+    "Harald Bregu": "harald.bregu@gmail.com"
   },
   "source": {
-    "git": "https://github.com/AldoOS/MGTextKit.git",
+    "git": "https://github.com/HaraldBregu/MGTextKit.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
-  "source_files": "MGTextKit/Classes/**/*"
+  "source_files": "MGTextKit/Classes/**/*",
+  "resource_bundles": {
+    "MGTextKit": [
+      "MGTextKit/Assets/**/*.{storyboard,xib}"
+    ]
+  },
+  "swift_version": "4.2"
 }
