@@ -30,7 +30,6 @@ public protocol MGTextAsset {
     var font: MGTextFont { get set }
     var image: MGTextImage { get set }
     var color: MGTextColor { get set }
-    var data: MGTextData { get set }
 }
 
 public protocol MGTextString {
@@ -51,8 +50,4 @@ public protocol MGTextColor {
     var navigationBarContent: UIColor { get set }
     var view: UIColor { get set }
     var viewContent: UIColor { get set }
-}
-
-public protocol MGTextData {
-    var url: String { get set }
 }

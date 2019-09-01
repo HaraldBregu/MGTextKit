@@ -26,9 +26,24 @@
 import UIKit
 
 
+public class MGTextData {
+    var type: MGTextDataType!
+    public init(type: MGTextDataType) {
+        self.type = type
+    }
+}
+
+public enum MGTextDataType {
+    case text(_ string: String)
+    case attributed(_ string: NSAttributedString)
+    case plain(filename: String, fileExtension: String)
+    case rtf(filename: String, fileExtension: String)
+    case html(filename: String, fileExtension: String)
+}
+
 public class MGTextController: UIViewController {
     @IBOutlet public weak var textView: UITextView!
-    public var assets: MGTextAsset!
+  
     public var leftBarButtonItems: (() -> [UIBarButtonItem])? {
         didSet {
             if let leftItems = leftBarButtonItems {
@@ -37,6 +52,7 @@ public class MGTextController: UIViewController {
             }
         }
     }
+    
     public var rightBarButtonItems: (() -> [UIBarButtonItem])? {
         didSet {
             if let rightItems = rightBarButtonItems {
@@ -44,6 +60,10 @@ public class MGTextController: UIViewController {
             }
         }
     }
+    
+    public var textData: (() -> (MGTextData))?
+
+    public var assets: MGTextAsset!
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -57,24 +77,67 @@ public class MGTextController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.prefersLargeTitles = false
-        
-        textView.backgroundColor = assets.color.view
-        textView.textColor = assets.color.viewContent
 
-//        if let rtfPath = Bundle.main.url(forResource: "TermsConditions", withExtension: "html") {
-//            do {
-//                textView.attributedText =
-//                    try NSAttributedString(
-//                        url: rtfPath,
-//                        options: [.documentType: NSAttributedString.DocumentType.rtf],
-//                        documentAttributes: nil)
-//            } catch _ {
-//
-//            }
-//        }
+        if let object = textData {
+            switch object().type {
+            case .text(let text)?:
+                textView.text = text
+                break
+            case .attributed(let attributedtext)?:
+                textView.attributedText = attributedtext
+                break
+            case .plain(let filename, let fileExtension)?:
+                if let rtfPath = Bundle.main.url(forResource: filename, withExtension: fileExtension) {
+                    do {
+                        textView.attributedText =
+                            try NSAttributedString(
+                                url: rtfPath,
+                                options: [.documentType: NSAttributedString.DocumentType.plain],
+                                documentAttributes: nil)
+                    } catch let error {
+                        print(error)
+                    }
+                }
+                break
+            case .rtf(let filename, let fileExtension)?:
+                if let rtfPath = Bundle.main.url(forResource: filename, withExtension: fileExtension) {
+                    do {
+                        textView.attributedText =
+                            try NSAttributedString(
+                                url: rtfPath,
+                                options: [.documentType: NSAttributedString.DocumentType.rtf],
+                                documentAttributes: nil)
+                    } catch let error {
+                        print(error)
+                    }
+                }
+                break
+            case .html(let filename, let fileExtension)?:
+                if let rtfPath = Bundle.main.url(forResource: filename, withExtension: fileExtension) {
+                    do {
+                        textView.attributedText =
+                            try NSAttributedString(
+                                url: rtfPath,
+                                options: [.documentType: NSAttributedString.DocumentType.html],
+                                documentAttributes: nil)
+                    } catch let error {
+                        print(error)
+                    }
+                }
+                break
+            default:
+                textView.text = ""
+                break
+            }
+        }
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        textView.setContentOffset(.zero, animated: false)
 
     }
-
 }
 
 extension MGTextController {
@@ -96,4 +159,3 @@ fileprivate let storyboardName          = "MGText"
 fileprivate let controllerIdentifier    = "MGTextController"
 fileprivate let resourceName            = "MGTextKit"
 fileprivate let resourceExtension       = "bundle"
-
