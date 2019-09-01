@@ -14,7 +14,7 @@
 		3720A75F598CD709CE5C5700473980C9 /* MGText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E1E1593CB9920123660D49F8ADC4F7 /* MGText.swift */; };
 		391DFE05CAAE8E56A6E71AB651D65B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		4E7E647459C35DBAA933ACF202EF357D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		A9F31386231AFE8900B411D0 /* MGTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F31385231AFE8900B411D0 /* MGTextController.swift */; };
+		A92D2B99231BFA42002E66DB /* MGTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D2B98231BFA41002E66DB /* MGTextController.swift */; };
 		AEED51124A063F5F7762F6530D5686AB /* MGTextKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7BEA49B8A36B4F4CB60932F80AEBA7 /* MGTextKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0EAF9C886C88158263DFB3741F66C89 /* MGTextKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35BA24FDAFC935409D6CBF0854D97B /* MGTextKit-dummy.m */; };
 		B6D06D5835AAF3A06984821BD9E57313 /* Pods-MGTextKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01433E6F3A4E5F3EEACAFF93C718794E /* Pods-MGTextKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +66,7 @@
 		A1DD07BC618A023924F769E905F6C03A /* Pods-MGTextKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGTextKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A631B160CF55A4A26D3F223D25A7222B /* Pods-MGTextKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGTextKit_Example-Info.plist"; sourceTree = "<group>"; };
 		A85C09DB57D81DA6E124E5B9D69FF28E /* Pods-MGTextKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGTextKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A9F31385231AFE8900B411D0 /* MGTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGTextController.swift; sourceTree = "<group>"; };
+		A92D2B98231BFA41002E66DB /* MGTextController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGTextController.swift; path = MGTextKit/Classes/MGTextController.swift; sourceTree = "<group>"; };
 		AABE90B5991281D2C3CA8EF442FC9D55 /* Pods-MGTextKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGTextKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		AF3004138DEA48AEDFE50FC8B58488D4 /* Pods-MGTextKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGTextKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		B2D0ED6514528ED2F48BC2D62FF5DDDA /* MGTextKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MGTextKit.xcconfig; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E1E1593CB9920123660D49F8ADC4F7 /* MGText.swift */,
-				A9F31385231AFE8900B411D0 /* MGTextController.swift */,
+				A92D2B98231BFA41002E66DB /* MGTextController.swift */,
 				3040F33E874C809A3156748615226C42 /* Pod */,
 				A346B327B095D6B2B182273149ED72C2 /* Resources */,
 				D3B1EDF5A4C348006AC6E64E6F9D5284 /* Support Files */,
@@ -427,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3720A75F598CD709CE5C5700473980C9 /* MGText.swift in Sources */,
-				A9F31386231AFE8900B411D0 /* MGTextController.swift in Sources */,
+				A92D2B99231BFA42002E66DB /* MGTextController.swift in Sources */,
 				B0EAF9C886C88158263DFB3741F66C89 /* MGTextKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
